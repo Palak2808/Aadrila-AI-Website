@@ -1,31 +1,39 @@
 import mission from "../assets/mission.png";
 import vision from "../assets/vision.png";
 import bg from "../assets/aboutBg.png";
+import TeamSection from "./TeamSection";
+import ContactPage from "./ContactPage";
+import Navbar from "./Navbar";
 
 export default function AboutPage() {
   return (
-    <section
-      className="bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${bg})` }}
-    >
-      <div className="relative mx-auto pt-28 pb-32 space-y-20">
-        <AboutHeader />
+    <>
+        <Navbar />
+      <section
+        className="bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${bg})` }}
+      >
+        <div className="relative mx-auto pt-28 pb-32 space-y-20">
+          <AboutHeader />
 
-        <InfoStrip
-          title="Our Vision"
-          align="right"
-          text="To redefine document management with cutting-edge technology that ensures accuracy, efficiency, and trust."
-          image={vision}
-        />
+          <InfoStrip
+            title="Our Vision"
+            align="right"
+            text="To redefine document management with cutting-edge technology that ensures accuracy, efficiency, and trust."
+            image={vision}
+          />
 
-        <InfoStrip
-          title="Our Mission"
-          align="left"
-          text="To redefine document management with cutting-edge technology that ensures accuracy, efficiency, and trust."
-          image={mission}
-        />
-      </div>
-    </section>
+          <InfoStrip
+            title="Our Mission"
+            align="left"
+            text="To redefine document management with cutting-edge technology that ensures accuracy, efficiency, and trust."
+            image={mission}
+          />
+        </div>
+      </section>
+      <TeamSection />
+      <ContactPage />
+    </>
   );
 }
 function AboutHeader() {

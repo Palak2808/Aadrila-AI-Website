@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="w-full backdrop-blur-md px-4 lg:px-20">
       <div className="mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <img src={logo} alt="Aadrila Technologies" className="h-9 w-auto" />
+        <img src={logo} alt="Aadrila Technologies" className="h-12 w-36" />
 
         {/* Nav Links */}
         <ul className="hidden md:flex items-center gap-4 lg:gap-8 text-sm lg:text-base font-medium text-gray-700">

@@ -41,10 +41,10 @@ export default function ProductsSection() {
       />
 
       <div className="text-center mb-24">
-        <p className="text-sm bg-gradient-to-r from-orange-500 to-blue-600 bg-clip-text text-transparent font-medium tracking-wide">
+        <p className="text-2xl bg-gradient-to-r from-[#CD6028] to-[#3E6EB4] bg-clip-text text-transparent font-medium tracking-wide">
           features and benefits.
         </p>
-        <h2 className="mt-2 text-4xl font-semibold text-gray-900">
+        <h2 className="mt-2 text-5xl font-semibold text-[#141219]">
           Our Products
         </h2>
       </div>

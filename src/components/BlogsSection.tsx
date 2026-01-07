@@ -44,14 +44,14 @@ export default function BlogsSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl font-semibold text-gray-900">Blogs</h2>
-          <p className="mt-6 text-lg">
-            <span className="text-orange-500">
-              Lorem Ipsum is simply dummy text
-            </span>{" "}
-            of the printing and typesetting industry.
+          <h2 className="text-5xl font-semibold text-[#141219]">Blogs</h2>
+          <p className="mt-6 text-xl">
+            <span className="bg-gradient-to-r from-[#CD6028] to-[#3E6EB4] bg-clip-text text-transparent">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </span>
             <br />
-            <span className="text-gray-500">
+            <span className="bg-gradient-to-r from-[#CD6028] to-[#3E6EB4] bg-clip-text text-transparent">
               Lorem Ipsum has been the industry’s standard.
             </span>
           </p>
@@ -92,13 +92,11 @@ function BlogCard({ title, date, desc }: BlogCardProps) {
       <div className="absolute inset-0 translate-y-6 rounded-2xl bg-gradient-to-r from-purple-200 to-blue-200 opacity-70 h-40 top-40" />
 
       <div className="relative z-10 rounded-2xl bg-white p-6 shadow-sm m-5 h-72">
-        <h3 className="text-lg font-semibold text-gray-900 leading-snug">
+        <h3 className="text-base font-semibold text-[#141219] leading-snug">
           {title}
         </h3>
-
-        <p className="mt-3 text-sm text-blue-500">{date}</p>
-
-        <p className="mt-4 text-gray-500 text-sm leading-relaxed">{desc}</p>
+        <p className="mt-3 text-xs text-[#719AD0]">{date}</p>
+        <p className="mt-4 text-[#696969] text-sm leading-relaxed">{desc}</p>
       </div>
     </div>
   );

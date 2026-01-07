@@ -40,16 +40,16 @@ const HeroSection = () => {
       <div className="mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
         <div>
-          <p className="text-orange-600 font-bold text-4xl mb-4 decoration-blue-500">
+          <p className="bg-gradient-to-r from-[#CD6028] to-[#3E6EB4] bg-clip-text text-transparent font-bold text-5xl mb-4">
             AI-Powered
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#141219]">
             Document Automation
             <br />& Fraud Detection
           </h1>
 
-          <p className="mt-6 text-gray-600 max-w-xl text-lg">
+          <p className="mt-6 text-gray-600 max-w-xl text-xl">
             Enhance security, accuracy, and efficiency with our cutting-edge AI
             solutions for seamless document processing and fraud prevention.
           </p>

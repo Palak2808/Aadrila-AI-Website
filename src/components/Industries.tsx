@@ -62,11 +62,11 @@ export default function Industries() {
       </div>
 
       <div className="relative mx-auto px-6">
-        <p className="mb-3 text-2xl font-medium text-orange-600">
+        <p className="mb-3 text-2xl font-medium bg-gradient-to-r from-[#CD6028] to-[#3E6EB4] bg-clip-text text-transparent">
           AI-driven innovation for growth.
         </p>
 
-        <h2 className="mb-20 max-w-xl text-5xl font-bold text-gray-900">
+        <h2 className="mb-20 max-w-xl text-5xl font-bold text-[#141219]">
           Industries We Empower
         </h2>
 
@@ -133,8 +133,8 @@ function Card({
         <img src={icon} alt="" />
       </div>
 
-      <h3 className="mb-3 text-xl font-semibold text-gray-900">{title}</h3>
-      <p className="leading-relaxed text-gray-500">{desc}</p>
+      <h3 className="mb-3 text-2xl font-semibold text-gray-900">{title}</h3>
+      <p className="leading-relaxed text-gray-500 text-base">{desc}</p>
     </div>
   );
 }
