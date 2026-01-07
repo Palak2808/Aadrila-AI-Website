@@ -1,25 +1,18 @@
-import HeroSection from "./components/HeroSection";
-import Navbar from "./components/Navbar";
-import bg from "./assets/headerBg.jpg";
-import ProductsSection from "./components/ProductsSection";
-import Industries from "./components/Industries";
-import BlogsSection from "./components/BlogsSection";
+import { Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import Home from "./components/Home";
+import AboutPage from "./components/AboutPage";
 import ContactPage from "./components/ContactPage";
+
 function App() {
   return (
-    <div>
-      <div
-        className="bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${bg})` }}
-      >
-        <Navbar />
-        <HeroSection />
-      </div>
-      <Industries />
-      <ProductsSection />
-      <BlogsSection />
-      <ContactPage />
-    </div>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Route>
+    </Routes>
   );
 }
 

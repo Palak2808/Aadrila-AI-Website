@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 const Navbar = () => {
   return (
@@ -8,16 +9,16 @@ const Navbar = () => {
 
         {/* Nav Links */}
         <ul className="hidden md:flex items-center gap-4 lg:gap-8 text-sm lg:text-base font-medium text-gray-700">
-          <li>Home</li>
+          <Link to="/">Home</Link>
           <li>Industries</li>
           <li>Products</li>
           <li>Blog</li>
           <li>Contact Us</li>
-          <li>About Us</li>
+          <Link to="/about">About Us</Link>
         </ul>
 
         {/* CTA */}
-        <button className="bg-blue-600 hover:bg-blue-700 transition text-white px-6 py-2.5 rounded-full text-sm font-medium">
+        <button className="bg-[#3E6EB4] hover:bg-[#3E6EB4]/90 transition text-white px-6 py-2.5 rounded-full text-sm font-medium">
           Get a Demo
         </button>
       </div>
