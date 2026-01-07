@@ -4,6 +4,7 @@ import bg from "./assets/headerBg.jpg";
 import ProductsSection from "./components/ProductsSection";
 import Industries from "./components/Industries";
 import BlogsSection from "./components/BlogsSection";
+import ContactPage from "./components/ContactPage";
 function App() {
   return (
     <div>
@@ -17,6 +18,7 @@ function App() {
       <Industries />
       <ProductsSection />
       <BlogsSection />
+      <ContactPage />
     </div>
   );
 }
