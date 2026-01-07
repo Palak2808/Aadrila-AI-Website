@@ -2,6 +2,8 @@ import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import bg from "./assets/headerBg.jpg";
 import ProductsSection from "./components/ProductsSection";
+import Industries from "./components/Industries";
+import BlogsSection from "./components/BlogsSection";
 function App() {
   return (
     <div>
@@ -12,7 +14,9 @@ function App() {
         <Navbar />
         <HeroSection />
       </div>
+      <Industries />
       <ProductsSection />
+      <BlogsSection />
     </div>
   );
 }

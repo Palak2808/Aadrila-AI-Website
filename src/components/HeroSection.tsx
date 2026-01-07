@@ -1,7 +1,36 @@
 import doc1 from "../assets/doc1.png";
-
 import doc2 from "../assets/doc2.png";
 import doc3 from "../assets/doc3.png";
+import { motion, easeOut } from "framer-motion";
+import type { Variants } from "framer-motion";
+
+const containerVariants: Variants = {
+  hidden: {
+    opacity: 1,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.35,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    x: 260,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.9,
+      ease: easeOut,
+    },
+  },
+};
 
 const HeroSection = () => {
   return (
@@ -37,27 +66,39 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center w-full">
+        <motion.div
+          className="flex items-center justify-center w-full"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {/* Left Background Card */}
-          <img
+          <motion.img
+            variants={cardVariants}
+            whileHover={{ y: -8 }}
             src={doc2}
             alt="Graph Document"
             className="w-74 rounded-lg  blur-xs"
           />
 
-          <img
+          <motion.img
             src={doc1}
             alt="Driving License"
             className="w-96 lg:w-[420px] rounded-xl relative z-20"
+            variants={cardVariants}
+            whileHover={{ y: -8 }}
           />
 
           {/* Right Background Card */}
-          <img
+          <motion.img
             src={doc3}
             alt="Table Document"
             className="w-74 rounded-lg blur-xs"
+            variants={cardVariants}
+            whileHover={{ y: -8 }}
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

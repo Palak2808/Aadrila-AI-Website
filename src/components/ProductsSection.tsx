@@ -2,8 +2,8 @@ import dots from "../assets/dots.png";
 import ring from "../assets/ring.png";
 import ring2 from "../assets/ring2.png";
 import docsim from "../assets/product.png";
-import docpilot from "../assets/product.png";
-import doxtract from "../assets/product.png";
+import docpilot from "../assets/product2.png";
+import doxtract from "../assets/product3.png";
 
 export default function ProductsSection() {
   return (
@@ -41,7 +41,7 @@ export default function ProductsSection() {
       />
 
       <div className="text-center mb-24">
-        <p className="text-sm text-orange-500 font-medium tracking-wide">
+        <p className="text-sm bg-gradient-to-r from-orange-500 to-blue-600 bg-clip-text text-transparent font-medium tracking-wide">
           features and benefits.
         </p>
         <h2 className="mt-2 text-4xl font-semibold text-gray-900">
@@ -50,132 +50,121 @@ export default function ProductsSection() {
       </div>
 
       <div className="mx-auto space-y-40">
-        {/* DOCSIM */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <span className="inline-block px-5 py-1 rounded-full bg-gradient-to-r from-orange-500 to-blue-600 text-white text-sm">
-              DocSim
-            </span>
+        <ProductSection
+          tag="DocSim"
+          title="AI-Powered Document Similarity Engine"
+          features={[
+            "Detects near-duplicates and tampered documents.",
+            "Identifies fraudulent patterns across repositories.",
+            "Multi-language support for global adaptability.",
+          ]}
+          benefits={[
+            "Save 30% time on manual checks.",
+            "Reduce document fraud by up to 40%.",
+          ]}
+          image={docsim}
+          floatDuration="4s"
+        />
 
-            <h3 className="mt-6 text-3xl font-bold text-gray-900">
-              AI-Powered Document Similarity Engine
-            </h3>
+        <ProductSection
+          tag="DocPilot"
+          title="Streamline Document Workflows with Automation"
+          features={[
+            "Automated document collection and routing.",
+            "Real-time tracking with dashboards.",
+            "Seamless API integrations.",
+          ]}
+          benefits={[
+            "Reduce turnaround times by 50%.",
+            "Improve operational efficiency.",
+          ]}
+          image={docpilot}
+          reverse
+          floatDuration="4.5s"
+        />
 
-            <h4 className="mt-8 font-semibold text-gray-700">Features:</h4>
-            <ul className="mt-4 space-y-3 text-gray-600">
-              <li>• Detects near-duplicates and tampered documents.</li>
-              <li>• Identifies fraudulent patterns across repositories.</li>
-              <li>• Multi-language support for global adaptability.</li>
-            </ul>
-
-            <h4 className="mt-6 font-semibold text-gray-700">Benefits:</h4>
-            <ul className="mt-4 space-y-3 text-gray-600">
-              <li>• Save 30% time on manual checks.</li>
-              <li>• Reduce document fraud by up to 40%.</li>
-            </ul>
-
-            <div className="mt-10 flex gap-4">
-              <button className="px-7 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition">
-                Learn More
-              </button>
-              <button className="px-7 py-3 rounded-full bg-blue-100 text-blue-700 hover:bg-blue-200 transition">
-                Schedule a Demo
-              </button>
-            </div>
-          </div>
-
-          <img
-            src={docsim}
-            className="rounded-3xl shadow-2xl w-[600px] h-[504px]"
-            style={{ animation: "float 4s ease-in-out infinite" }}
-            alt=""
-          />
-        </div>
-
-        {/* DOCPILOT */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <img
-            src={docpilot}
-            className="rounded-3xl shadow-2xl order-2 lg:order-1  w-[600px] h-[504px]"
-            style={{ animation: "float 4.5s ease-in-out infinite" }}
-            alt=""
-          />
-
-          <div className="order-1 lg:order-2">
-            <span className="inline-block px-5 py-1 rounded-full bg-gradient-to-r from-orange-500 to-blue-600 text-white text-sm">
-              DocPilot
-            </span>
-
-            <h3 className="mt-6 text-3xl font-bold text-gray-900">
-              Streamline Document Workflows with Automation
-            </h3>
-
-            <h4 className="mt-8 font-semibold text-gray-700">Features:</h4>
-            <ul className="mt-4 space-y-3 text-gray-600">
-              <li>• Automated document collection and routing.</li>
-              <li>• Real-time tracking with dashboards.</li>
-              <li>• Seamless API integrations.</li>
-            </ul>
-
-            <h4 className="mt-6 font-semibold text-gray-700">Benefits:</h4>
-            <ul className="mt-4 space-y-3 text-gray-600">
-              <li>• Reduce turnaround times by 50%.</li>
-              <li>• Improve operational efficiency.</li>
-            </ul>
-
-            <div className="mt-10 flex gap-4">
-              <button className="px-7 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition">
-                Learn More
-              </button>
-              <button className="px-7 py-3 rounded-full bg-blue-100 text-blue-700 hover:bg-blue-200 transition">
-                Schedule a Demo
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* DOXTRACT */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <span className="inline-block px-5 py-1 rounded-full bg-gradient-to-r from-orange-500 to-blue-600 text-white text-sm">
-              Doxtract
-            </span>
-
-            <h3 className="mt-6 text-3xl font-bold text-gray-900">
-              Extract, Validate, and Process Documents with Ease
-            </h3>
-
-            <h4 className="mt-8 font-semibold text-gray-700">Features:</h4>
-            <ul className="mt-4 space-y-3 text-gray-600">
-              <li>• OCR & NLP-based data extraction.</li>
-              <li>• Handles unstructured documents.</li>
-              <li>• Validates fields via external sources.</li>
-            </ul>
-
-            <h4 className="mt-6 font-semibold text-gray-700">Benefits:</h4>
-            <ul className="mt-4 space-y-3 text-gray-600">
-              <li>• Process 10,000+ documents in minutes.</li>
-              <li>• Achieve 99% data accuracy.</li>
-            </ul>
-
-            <div className="mt-10 flex gap-4">
-              <button className="px-7 py-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition">
-                Learn More
-              </button>
-              <button className="px-7 py-3 rounded-full bg-blue-100 text-blue-700 hover:bg-blue-200 transition">
-                Schedule a Demo
-              </button>
-            </div>
-          </div>
-
-          <img
-            src={doxtract}
-            className="rounded-3xl shadow-2xl  w-[600px] h-[504px]"
-            style={{ animation: "float 5s ease-in-out infinite" }}
-            alt=""
-          />
-        </div>
+        <ProductSection
+          tag="Doxtract"
+          title="Extract, Validate, and Process Documents with Ease"
+          features={[
+            "OCR & NLP-based data extraction.",
+            "Handles unstructured documents.",
+            "Validates fields via external sources.",
+          ]}
+          benefits={[
+            "Process 10,000+ documents in minutes.",
+            "Achieve 99% data accuracy.",
+          ]}
+          image={doxtract}
+          floatDuration="5s"
+        />
       </div>
     </section>
+  );
+}
+
+type ProductSectionProps = {
+  tag: string;
+  title: string;
+  features: string[];
+  benefits: string[];
+  image: string;
+  reverse?: boolean;
+  floatDuration?: string;
+};
+
+export function ProductSection({
+  tag,
+  title,
+  features,
+  benefits,
+  image,
+  reverse = false,
+  floatDuration = "4s",
+}: ProductSectionProps) {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* Text */}
+      <div className={reverse ? "order-1 lg:order-2" : ""}>
+        <span className="inline-block px-5 py-1 rounded-full bg-gradient-to-r from-orange-500 to-blue-600 text-white text-lg">
+          {tag}
+        </span>
+
+        <h3 className="mt-6 text-3xl font-bold text-gray-900">{title}</h3>
+
+        <h4 className="mt-8 font-semibold text-gray-700">Features:</h4>
+        <ul className="mt-4 space-y-3 text-gray-600 font-light">
+          {features.map((item, i) => (
+            <li key={i}>• {item}</li>
+          ))}
+        </ul>
+
+        <h4 className="mt-6 font-semibold text-gray-700">Benefits:</h4>
+        <ul className="mt-4 space-y-3 text-gray-600 font-light">
+          {benefits.map((item, i) => (
+            <li key={i}>• {item}</li>
+          ))}
+        </ul>
+
+        <div className="mt-10 flex gap-4">
+          <button className="px-7 py-3 rounded-full text-white transition bg-[#3E6EB4] hover:bg-[#3E6EB4]/90">
+            Learn More
+          </button>
+          <button className="px-7 py-3 rounded-full bg-[#3E6EB4] hover:bg-[#3E6EB4]/90 text-white transition">
+            Schedule a Demo
+          </button>
+        </div>
+      </div>
+
+      {/* Image */}
+      <img
+        src={image}
+        alt={tag}
+        className={`rounded-3xl shadow-2xl w-[600px] h-[504px] ${
+          reverse ? "order-2 lg:order-1" : ""
+        }`}
+        style={{ animation: `float ${floatDuration} ease-in-out infinite` }}
+      />
+    </div>
   );
 }
