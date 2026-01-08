@@ -100,7 +100,7 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden bg-white shadow-lg rounded-b-2xl px-6 pb-6">
           <ul className="flex flex-col gap-4 text-gray-700 font-medium">
-            <li onClick={() => navigate("/")}>Home</li>
+            <li onClick={() => handleScroll("home")}>Home</li>
             <li onClick={() => handleScroll("industries")}>Industries</li>
             <li onClick={() => handleScroll("products")}>Products</li>
             <li onClick={() => handleScroll("blogs")}>Blog</li>

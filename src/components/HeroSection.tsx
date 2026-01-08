@@ -84,7 +84,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="relative flex gap-44 items-center justify-center h-[420px]">
+        <div className="relative flex items-center justify-center h-[420px]">
           {order.map((imgIndex, positionIndex) => {
             const pos = positions[positionIndex];
 
