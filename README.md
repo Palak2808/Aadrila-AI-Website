@@ -1,3 +1,43 @@
+# AI Document Automation Website ✨
+
+A modern, responsive frontend web application.
+Built with smooth animations, clean UI, and fully responsive layouts for **mobile, tablet, and desktop** screens.
+
+---
+
+## 🚀 Features
+
+- ⚡ Fully responsive design (sm / md / lg)
+- 🎨 Clean & modern UI with Tailwind CSS
+- 🎥 Smooth animations using Framer Motion
+- 🖼️ Animated hero section with focus-based image transitions
+- 👥 Interactive Team carousel section
+- 📰 Blog section with animated cards
+- 📩 Contact form with responsive layout
+- 🧭 Reusable components & clean structure
+
+---
+
+## 🛠️ Tech Stack
+
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Lucide React Icons**
+- **Vite** (for fast development)
+
+---
+
+## 📂 Project Structure
+
+src/
+│── assets/ # Images & static assets
+│── components/  # Page-level components
+│── App.tsx
+│── main.tsx
+│── index.css
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
