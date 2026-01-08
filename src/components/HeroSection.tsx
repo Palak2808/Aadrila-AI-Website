@@ -3,59 +3,77 @@ import doc2 from "../assets/doc2.png";
 import doc3 from "../assets/doc3.png";
 import { motion, easeOut } from "framer-motion";
 import type { Variants } from "framer-motion";
+import { useEffect, useState } from "react";
+const images = [doc1, doc2, doc3];
 
-const containerVariants: Variants = {
-  hidden: {
-    opacity: 1,
+const positions = [
+  {
+    x: -280,
+    scale: 0.75,
+    filter: "blur(3px)",
+    zIndex: 1,
   },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.35,
-      delayChildren: 0.2,
-    },
+  {
+    x: 0,
+    scale: 1.1,
+    filter: "blur(0px)",
+    zIndex: 3,
   },
-};
+  {
+    x: 280,
+    scale: 0.85,
+    filter: "blur(3px)",
+    zIndex: 1,
+  },
+];
 
-const cardVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    x: 260,
-  },
+const cardVariant1: Variants = {
+  hidden: { opacity: 0, x: -260 },
   show: {
     opacity: 1,
     x: 0,
-    transition: {
-      duration: 0.9,
-      ease: easeOut,
-    },
+    transition: { duration: 0.9, ease: easeOut },
   },
 };
 
 const HeroSection = () => {
-  return (
-    <section className="px-4 lg:px-20">
-      {/* Background waves */}
+  const [order, setOrder] = useState([0, 1, 2]);
 
-      <div className="mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOrder(([a, b, c]) => [c, a, b]);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <section className="px-4 sm:px-6 lg:px-20 overflow-hidden pt-12 lg:pt-0">
+      <motion.div
+        className="mx-auto py-16 sm:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+        variants={cardVariant1}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         {/* Left Content */}
-        <div>
-          <p className="bg-gradient-to-r from-[#CD6028] to-[#3E6EB4] bg-clip-text text-transparent font-bold text-5xl mb-4">
+        <div className="text-center lg:text-left">
+          <p className="bg-gradient-to-r from-[#CD6028] to-[#3E6EB4] bg-clip-text text-transparent font-bold text-3xl sm:text-4xl md:text-5xl mb-4">
             AI-Powered
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#141219]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-[#141219]">
             Document Automation
-            <br />& Fraud Detection
+            <br className="hidden sm:block" />& Fraud Detection
           </h1>
 
-          <p className="mt-6 text-gray-600 max-w-xl text-xl">
+          <p className="mt-6 text-gray-600 max-w-xl mx-auto lg:mx-0 text-base sm:text-lg md:text-xl">
             Enhance security, accuracy, and efficiency with our cutting-edge AI
             solutions for seamless document processing and fraud prevention.
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
             <button className="bg-[#3E6EB4] hover:bg-[#3E6EB4]/90 transition text-white px-8 py-3 rounded-full text-base font-medium">
               Get a Demo
             </button>
@@ -66,40 +84,27 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <motion.div
-          className="flex items-center justify-center w-full"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          {/* Left Background Card */}
-          <motion.img
-            variants={cardVariants}
-            whileHover={{ y: -8 }}
-            src={doc2}
-            alt="Graph Document"
-            className="w-74 rounded-lg  blur-xs"
-          />
+        <div className="relative flex gap-44 items-center justify-center h-[420px]">
+          {order.map((imgIndex, positionIndex) => {
+            const pos = positions[positionIndex];
 
-          <motion.img
-            src={doc1}
-            alt="Driving License"
-            className="w-96 lg:w-[420px] rounded-xl relative z-20"
-            variants={cardVariants}
-            whileHover={{ y: -8 }}
-          />
-
-          {/* Right Background Card */}
-          <motion.img
-            src={doc3}
-            alt="Table Document"
-            className="w-74 rounded-lg blur-xs"
-            variants={cardVariants}
-            whileHover={{ y: -8 }}
-          />
-        </motion.div>
-      </div>
+            return (
+              <motion.img
+                key={imgIndex}
+                src={images[imgIndex]}
+                alt=""
+                animate={pos}
+                transition={{
+                  duration: 0.8,
+                  ease: [0.4, 0, 0.2, 1],
+                }}
+                className="absolute w-64 sm:w-80 rounded-xl"
+                style={{ zIndex: pos.zIndex }}
+              />
+            );
+          })}
+        </div>
+      </motion.div>
     </section>
   );
 };

@@ -12,6 +12,7 @@ export default function Home() {
       <div
         className="bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${bg})` }}
+        id="home"
       >
         <Navbar />
         <HeroSection />
