@@ -34,6 +34,14 @@ export default function TeamSection() {
 
   return (
     <section className="relative py-24 overflow-hidden bg-white">
+      <style>
+        {`
+          @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-14px); }
+          }
+        `}
+      </style>
       <div className="absolute left-350 w-64">
         <img
           src={dots}
@@ -50,8 +58,8 @@ export default function TeamSection() {
 
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto">
-        <h2 className="text-4xl font-bold text-gray-900">Meet our team</h2>
-        <p className="mt-4 text-lg text-[#D46A2C]">
+        <h2 className="text-5xl font-semibold text-gray-900">Meet our team</h2>
+        <p className="mt-4 text-2xl bg-gradient-to-r from-[#CD6028] to-[#3E6EB4] bg-clip-text text-transparent">
           Meet our passionate and talented team, committed to delivering
           exceptional results, driving innovation, and transforming your vision
           into reality.
@@ -103,9 +111,11 @@ export default function TeamSection() {
         <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[16px] border-l-transparent border-r-[16px] border-r-transparent border-b-[16px] border-b-[#4A6FB3]" />
 
         <h3 className="text-4xl font-bold text-center">{activeMember.name}</h3>
-        <p className="text-center text-orange-300 mt-1">{activeMember.role}</p>
+        <p className="text-center text-[#CD6028] mt-1 text-2xl">
+          {activeMember.role}
+        </p>
 
-        <p className="mt-6 text-center text-sm leading-relaxed max-w-2xl mx-auto">
+        <p className="mt-6 text-center text-base leading-relaxed max-w-2xl mx-auto">
           {activeMember.description}
         </p>
       </motion.div>

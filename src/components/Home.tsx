@@ -16,10 +16,20 @@ export default function Home() {
         <Navbar />
         <HeroSection />
       </div>
-      <Industries />
-      <ProductsSection />
-      <BlogsSection />
-      <ContactPage />
+      <div id="industries">
+        <Industries />
+      </div>
+
+      <div id="products">
+        <ProductsSection />
+      </div>
+
+      <div id="blogs">
+        <BlogsSection />
+      </div>
+      <div id="contact">
+        <ContactPage />
+      </div>
     </>
   );
 }
