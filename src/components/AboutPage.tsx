@@ -38,7 +38,6 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-
       <section
         className="relative bg-cover bg-center bg-no-repeat overflow-hidden"
         style={{ backgroundImage: `url(${bg})` }}
@@ -52,7 +51,6 @@ export default function AboutPage() {
           `}
         </style>
 
-        {/* Zigzag */}
         <div className="absolute left-0 top-20 sm:top-30 w-40 sm:w-64 hidden sm:block">
           <img
             src={zigzag}

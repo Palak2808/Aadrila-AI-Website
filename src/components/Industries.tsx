@@ -97,7 +97,6 @@ export default function Industries() {
               icon={lending}
             />
           </motion.div>
-
           <motion.div
             variants={cardVariants}
             whileHover={{ y: -8 }}
