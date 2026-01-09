@@ -6,7 +6,7 @@ import type { Variants } from "framer-motion";
 const cardVariant1: Variants = {
   hidden: {
     opacity: 0,
-    x: -260,
+    x: -100,
   },
   show: {
     opacity: 1,
@@ -21,7 +21,7 @@ const cardVariant1: Variants = {
 const cardVariant2: Variants = {
   hidden: {
     opacity: 0,
-    x: 260,
+    x: 100,
   },
   show: {
     opacity: 1,
