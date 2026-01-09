@@ -25,7 +25,7 @@ const blogs = [
 const cardVariant: Variants = {
   hidden: {
     opacity: 0,
-    x: 275,
+    x: 200,
   },
   show: {
     opacity: 1,
