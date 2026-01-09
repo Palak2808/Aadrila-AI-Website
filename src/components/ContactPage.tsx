@@ -6,7 +6,7 @@ import type { Variants } from "framer-motion";
 const cardVariant1: Variants = {
   hidden: {
     opacity: 0,
-    x: -120,
+    x: -260,
   },
   show: {
     opacity: 1,
@@ -21,7 +21,7 @@ const cardVariant1: Variants = {
 const cardVariant2: Variants = {
   hidden: {
     opacity: 0,
-    x: 120,
+    x: 260,
   },
   show: {
     opacity: 1,
@@ -35,7 +35,7 @@ const cardVariant2: Variants = {
 
 export default function ContactPage() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative lg:overflow-hidden">
       {/* Decorative dots */}
       <div className="absolute hidden lg:block -left-10 top-12 w-64">
         <img
